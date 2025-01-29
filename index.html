@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Inventory Management System</title>
-    
-       
 </head>
 <body>
     <header>
         <h1>Inventory Management System</h1>
     </header>
-    
-    <table id = "productTableBody">
+
+    <table>
         <thead>
             <tr>
                 <th>Product Name</th>
@@ -21,44 +19,20 @@
                 <th>Price</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td> Product 1</td>
-                <td>10</td>
-                <td>$25.00</td>
-            </tr>
-            <tr>
-                <td> Product 2</td>
-                <td>5</td>
-                <td>$15.00</td>
-            </tr>
-            <tr>
-                <td> Product 3</td>
-                <td>5</td>
-                <td>$15.00</td>
-            </tr>
-            <tr>
-                <td> Product 4</td>
-                <td>9</td>
-                <td>$34.00</td>
-            </tr>
-            <tr>
-                <td> Product 5</td>
-                <td>9</td>
-                <td>$15.00</td>
-            </tr>
-            <tr>
-                <td> Product 6</td>
-                <td>4</td>
-                <td>$78.00</td>
-            </tr>
-        </tbody>
+        <tbody id="productTableBody"></tbody>
     </table>
-    
-    <footer>
-        <p>Created by syeda ab</p>
-    </footer>
-    <script src="app.js"></script>
 
+    <div class="input-container">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="number" id="productQuantity" placeholder="Quantity">
+        <input type="number" id="productPrice" placeholder="Price">
+        <button>Add Product</button>
+    </div>
+
+    <footer>
+        <p>Created by Syeda Ab</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
