@@ -15,7 +15,7 @@ function displayProducts(): void {
     const tableBody = document.getElementById("productTableBody") as HTMLTableSectionElement;
     if (!tableBody) return;
 
-    tableBody.innerHTML = ""; // Clear table before re-rendering
+    tableBody.innerHTML = ""; 
 
     products.forEach(product => {
         const row = document.createElement("tr");
@@ -47,13 +47,13 @@ function addProduct(): void {
     products.push({ name, quantity, price });
     displayProducts();
 
-    // Clear input fields
+    
     nameInput.value = "";
     quantityInput.value = "";
     priceInput.value = "";
 }
 
-// Run script only after the page loads
+
 document.addEventListener("DOMContentLoaded", () => {
     displayProducts();
 

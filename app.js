@@ -8,7 +8,7 @@ function displayProducts() {
     var tableBody = document.getElementById("productTableBody");
     if (!tableBody)
         return;
-    tableBody.innerHTML = ""; // Clear table before re-rendering
+    tableBody.innerHTML = "";
     products.forEach(function (product) {
         var row = document.createElement("tr");
         row.innerHTML = "\n            <td>".concat(product.name, "</td>\n            <td>").concat(product.quantity, "</td>\n            <td>$").concat(product.price.toFixed(2), "</td>\n        ");
@@ -30,12 +30,10 @@ function addProduct() {
     }
     products.push({ name: name, quantity: quantity, price: price });
     displayProducts();
-    // Clear input fields
     nameInput.value = "";
     quantityInput.value = "";
     priceInput.value = "";
 }
-// Run script only after the page loads
 document.addEventListener("DOMContentLoaded", function () {
     displayProducts();
     var addButton = document.querySelector("button");
